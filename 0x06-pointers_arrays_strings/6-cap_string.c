@@ -36,5 +36,5 @@ str[i] -= ('a' - 'A');
 }
 }
 }
-return (str);
+return (0);
 }

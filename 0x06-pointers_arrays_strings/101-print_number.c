@@ -1,24 +1,36 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
-* print_number - prints an integer.
-* @n: integer
-* Return: void
-*/
-
+ *print_number - function that prints an integer.
+ *@n: fghji
+ *Return: 0
+ *
+ */
 void print_number(int n)
 {
-int divisor = 1, i, resp;
-if (n < 0)
-{
-_putchar('-');
-n *= -1;
-}
-for (i = 0; n / divisor > 9; i++, divisor *= 10)
-;
-for (; divisor >= 1; n %= divisor, divisor /= 10)
-{
-resp = n / divisor;
-_putchar('0' + resp);
-}
+  unsigned int dc, dig, nat = n;
+  double f = 1;
+
+  if (n == 0)
+    _putchar('0');
+  else
+    {
+      if (n < 0)
+	{
+	  nat = n * -1;
+	  _putchar('-');
+	}
+
+      while (f <= nat)
+	f *= 10;
+      dc = f / 10;
+
+      while (dc >= 1)
+	{
+	  dig = nat / dc;
+	  _putchar(dig + '0');
+	  nat = (nat - (dc * dig));
+	  dc /= 10;
+	}
+    }
 }

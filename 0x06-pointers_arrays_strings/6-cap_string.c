@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * *cap_string - capitalize words
@@ -36,5 +37,5 @@ str[i] -= ('a' - 'A');
 }
 }
 }
-return (0);
+return (str);
 }
